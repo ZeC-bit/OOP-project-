@@ -28,4 +28,7 @@ class Account
         strcpy(cusName, name);
   }
   
+  int GetAccID() { return accID; }
+  
+  
   
