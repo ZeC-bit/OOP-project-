@@ -1,4 +1,3 @@
-
 #include <iostream>
 #include <cstring>
 
@@ -30,5 +29,17 @@ class Account
   
   int GetAccID() { return accID; }
   
+  void Deposit(int money)
+  {
+    balance += money;
+  }
   
+  int Withdraw(int money)
+  {
+    if(balance<money)
+      return 0;
+    
+    balance -= money;
+    return money;
+  }
   
