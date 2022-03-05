@@ -43,3 +43,12 @@ class Account
     return money;
   }
   
+  void ShowAccInfo()
+  {
+    cout << "Account ID: " << accID << endl;
+    cout << "Name: " << cusName << endl;
+    cout << "Balance: " << balance << endl;
+  }
+  
+  
+  
