@@ -156,9 +156,4 @@ void ShowAllAccInfo(void)
   char name;
   int balance;
 
-  for(int i=0; i < accNum; i++){
-    cout << " ID: " << accArr[i].accID << endl;
-    cout << "name: " << accArr[i].cusName << endl;
-    cout << "balance: " << accArr[i].balance << endl;
-  }
-}
+
