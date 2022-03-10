@@ -51,4 +51,23 @@ class Account
   }
   
   
+  ~Account()
+  {
+    delete []cusName;
+  }
+};
+
+Account * accArr[100];
+int accNum=0;
+
+int main(void)
+{
+  int choice;
+
+  while(1)
+  {
+    ShowMenu();
+  }
+}
+  
   
