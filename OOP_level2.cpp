@@ -106,5 +106,40 @@ void ShowMenu(void)
   cout << "5. 프로그램 종료" << endl;
 }
 
+void MakeAccount(void)
+{
+  int id;
+  char name[NAME_LEN];
+  int balance;
+  
+  cout << "[계좌개설]" << endl;
+  cout << "계좌 ID: "; cin >> id;
+  cout << "이름: "; cin  >> name;
+  cout << "입금액: "; cin >> balance;
+  cout << endl;
+  
+  accArr[accNum++]=new Account(id, balance, name);
+}
 
+void DepositMoney(void)
+{
+  int money;
+  int id;
+  cout << " [입  금] " << endl;
+  cout << " 계좌ID: "; cin >> id;
+  cout << " 입금액: "; cin >> money;
+  
+  for(int i=0; i<accNum; i++)
+  {
+    if(accArr[i]-> GetAccID()==id)
+    {
+      accArr[i]->Deposit(money);
+      cout << "입금완료" << endl << endl;
+      return;
+    }
+  }
+  cout << " Invalid ID... : << endl << endl;
+ }
+
+  
 
